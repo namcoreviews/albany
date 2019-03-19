@@ -64,17 +64,22 @@ var chart = new CanvasJS.Chart("chartContainer3",
             intervalType: "month"
         },
         axisY: {
-            includeZero: false
+            includeZero: true
         },
         data: [
         {
           type: "line",
           dataPoints: [
+			  { x: new Date(2018, 05, 00), y: 0 },
               { x: new Date(2018, 06, 16), y: 1 },
               { x: new Date(2018, 06, 21), y: 5 },
               { x: new Date(2018, 06, 22), y: 1 },
               { x: new Date(2018, 06, 25), y: 5 },
               { x: new Date(2018, 07, 08), y: 3 },
+			  { x: new Date(2018, 08, 01), y: 0 },
+			  { x: new Date(2018, 09, 01), y: 0 },
+			  { x: new Date(2018, 10, 01), y: 0 },
+			  { x: new Date(2018, 11, 01), y: 0 },
               { x: new Date(2019, 00, 11), y: 4 },
               { x: new Date(2019, 01, 25), y: 5 }
             ]
@@ -116,6 +121,27 @@ chart.render();
 	</head>
 	<body class="is-preload">
 
+			<div class="sidenav">
+			  <a href="https://namcoreviews.github.io/rockyhill/">Rocky Hill</a>
+			  <a href="https://namcoreviews.github.io/orange/">Orange</a>
+			  <a href="https://namcoreviews.github.io/southington">Southington</a>
+			  <a href="https://namcoreviews.github.io/auburn">Auburn</a>
+			  <a href="https://namcoreviews.github.io/springfield">Springfield</a>
+			  <a href="https://namcoreviews.github.io/nashua">Nashua</a>
+			  <a href="https://namcoreviews.github.io/danbury">Danbury</a>
+			  <a href="https://namcoreviews.github.io/salem">Salem</a>
+			  <a href="https://namcoreviews.github.io/attleboro">South Attleboro</a>
+			  <a href="https://namcoreviews.github.io/peabody">Peabody</a>
+			  <a href="https://namcoreviews.github.io/swansea">Swansea</a>
+			  <a href="https://namcoreviews.github.io/poughkeepsie">Poughkeepsie</a>
+			  <a href="https://namcoreviews.github.io/manchester">Manchester</a>
+			  <a href="https://namcoreviews.github.io/hanover">Hanover</a>
+			  <a href="https://namcoreviews.github.io/albany">Albany</a>
+			  <a href="https://namcoreviews.github.io/westbrook">Westbrook</a>
+			  <a href="https://namcoreviews.github.io/corporate">Corporate</a>
+
+			</div>	
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -212,7 +238,7 @@ chart.render();
 									<p>You can see all the reviews for the store by pressing the button.</p>
 									<div class="container">
 										<div class="col-md-6">
-											<p><input type="text" id="placeid" class="form-control" placeholder="Place ID" value="ChIJNZOdgDYM3okR17GEhC_Qcv8"/></p>
+											<p hidden="hidden"><input type="text" id="placeid" class="form-control" placeholder="Place ID" value="ChIJNZOdgDYM3okR17GEhC_Qcv8"/></p>
 											<p><button class="go btn btn-block btn-primary">Get Reviews</button></p>
 											<div class="results"></div>
 										</div>
